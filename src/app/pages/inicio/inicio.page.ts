@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { Usuario } from 'src/app/interfaces/usuario-interface';
 import { ApiService } from 'src/app/services/api.service';
+import { SQLite,SQLiteObject } from '@ionic-native/sqlite/ngx';
+
 
 @Component({
   selector: 'app-inicio',
@@ -16,7 +18,21 @@ export class InicioPage implements OnInit {
     message: 'Please wait...'
   });
 
-  constructor(private api: ApiService, private loadingController: LoadingController) {
+  constructor (private sqlite: SQLite,private api: ApiService, private loadingController: LoadingController, private alertController: AlertController)
+  {this.sqlite.create({
+    name: 'datos.db',
+    location: 'default',
+    androidDatabaseLocation: 'default'
+    }).then((db: SQLiteObject)=>{
+      db.executeSql ('CREATE TABLE IF NOT EXIST PERSONA (RUT VARCHAR(15),NOMBRE VARCHAR (50)', []).then (() => {
+        console.log ('TABLA OK');
+      }).catch (e=> {
+        console.log ('TABLA NOK');
+      })
+    
+    }).catch(e=> {
+      console.log('TABLA NOK');
+    })  
   }
   
   ngOnInit() {
