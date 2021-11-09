@@ -1,7 +1,0 @@
-{
-  "name": "app-rutas-protegidas",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
