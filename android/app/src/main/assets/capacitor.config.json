@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "app-rutas-protegidas",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

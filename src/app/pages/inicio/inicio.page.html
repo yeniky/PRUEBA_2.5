@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="color">
+    <ion-title>Información de Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let x of listaUsuarios">
+    <ion-item>
+      <ion-card expand="full" class="tarjeta">
+        <ion-card-header>
+          <ion-card-subtitle>{{ x.CORREO }}</ion-card-subtitle>
+          <ion-card-title>{{ x.NOMBRE }} {{ x.APELLIDO_PATERNO }} {{ x.APELLIDO_MATERNO }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-button expand="block" color="dark" fill="outline"> Publicidad : www.fer-sepulveda.cl</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

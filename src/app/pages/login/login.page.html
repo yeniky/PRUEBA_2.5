@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="color">
+    <ion-title>Aplicación API</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="assets/images/login.svg"></ion-img>
+  <ion-item class="ion-margin-top">
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input [(ngModel)]="modeloCorreo"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="modeloContrasena"></ion-input>
+  </ion-item>
+  <ion-button expand="block" class="color ion-margin-top" (click)="validarLogin()">Ingresar</ion-button>
+  <ion-button expand="block" color="dark" fill="outline" class="ion-margin-top" (click)="mostrarFormulario()">
+    <ion-icon name="person-add-outline" slot="start"></ion-icon>
+    Crear Nuevo Usuario!!!!
+
+  </ion-button>
+</ion-content>
