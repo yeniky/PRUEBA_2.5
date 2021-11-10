@@ -25,11 +25,14 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-.color {
-    --background: #FF6363;
-    --color: #FFFFFF;
-}
+
 
 .tarjeta {
     --background: linear-gradient(142deg, rgba(249,210,210,1) 0%, rgba(252,237,237,1) 35%, rgba(255,255,255,1) 100%);
 }
+
+.color {
+    --background: #3e51fa;
+    --color: #FFFFFF;
+}
+

@@ -29,9 +29,9 @@ export class InicioPage implements OnInit {
       }).catch (e=> {
         console.log ('TABLA NOK');
       })
-    
     }).catch(e=> {
       console.log('TABLA NOK');
+
     })  
   }
   
@@ -48,7 +48,9 @@ export class InicioPage implements OnInit {
       this.dismissLoader();
     }) 
     
+  
   }
+
 
   simpleLoader() {
       this.loadingController.create({
